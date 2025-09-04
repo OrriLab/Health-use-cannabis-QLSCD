@@ -23,63 +23,22 @@ Got it — here’s your text with **only spaces and line breaks adjusted** so G
 In the **Stata-Programs** folder you will find:
 
 **P. auto\_traj\_initial.do**:
-Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC).
-Example usage:
-auto_traj_initial, trajopts("var(m_12m_thc_child n_12m_thc_child p_12m_thc_child r_12m_thc_child) indep(mage-rage) model(zip) drop(0) obsmar(can_mar) weight(sampling)") groups(5) initpoly(2)
-→ Fits models with 1–5 groups, each with quadratic polynomials, and compares them on BIC.
-Created by Pablo Martínez
+Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC). Created by Pablo Martínez.
 
 **P. auto\_traj\_final.do**:
-Performs polynomial selection for trajectory models, also based on BIC.
-
-Example usage:
-
-auto_traj_final, trajopts("var(m_12m_thc_child n_12m_thc_child p_12m_thc_child r_12m_thc_child) indep(mage-rage) model(zip) drop(0) obsmar(can_mar) weight(sampling)") random(groups(3) polynom(3) maxmod(all))
-
-→ Tests all possible 3-group ZIP models, with polynomial orders ranging from 0 to 3 across classes.
-
-Created by Pablo Martínez
+Performs polynomial selection for trajectory models, also based on BIC. Created by Pablo Martínez.
 
 **P. covbalance.do**:
-Evaluates covariate balance across groups (supports binary or multi-valued treatments, overlap weights and ASD checks).
-
-Example usage:
-
-covbalance2, treatment(_traj_Group) covariates($impnameglobdich) weights(overlap) balance(asd) savewgt(overlap)
-
-→ Assesses balance of dichotomous covariates across trajectory groups using overlap weights and ASD diagnostics, saving the weights for later analyses.
-
-Created by Pablo Martínez
+Evaluates covariate balance across groups (supports binary or multi-valued treatments, overlap weights and ASD checks). Created by Pablo Martínez.
 
 **P. micheckimputed.do**:
-Diagnostic program for inspecting multiply imputed datasets by comparing distributions of imputed vs observed values.
-
-Example usage:
-
-micheckimputed, noncat(o_a_famfunc p_internalizing p_externalizing p_socialskills p_cognitiveskills)
-micheckimputed, cat(ethnicitymom ethnicitydad tobaccopregnant lifetobaccochild lifealcoholchild alcoholpregnant)
-
-→ Produces checks for continuous and categorical imputed variables.
-
-Created by Pablo Martínez
+Diagnostic program for inspecting multiply imputed datasets by comparing distributions of imputed vs observed values. Created by Pablo Martínez.
 
 **P. miconverge.do**:
-Monitors and saves convergence diagnostics for multiple imputation routines.
-
-Example usage:
-
-miconverge, missvar(o_a_famfunc p_internalizing p_externalizing p_socialskills p_cognitiveskills o_a_tob_mom o_a_oh_mom o_a_dr_mom) tracename(trace)
-
-→ Generates trace plots for convergence of imputed variables.
-
-Originally described in the Stata Manual
+Monitors and saves convergence diagnostics for multiple imputation routines. Described in the Stata Manual.
 
 **P. mivif.do**:
-Calculates multicollinearity diagnostics (variance inflation factors, VIF) in multiply imputed datasets.
-
-Created by **Daniel Klein**
+Calculates multicollinearity diagnostics (variance inflation factors, VIF) in multiply imputed datasets. Created by *Daniel Klein*.
 
 **P. Summary\_table\_procTraj.do**:
-Produces summary tables of trajectory models, including group proportions and posterior probabilities.
-
-Created by **Andrew Wheeler**
+Produces summary tables of trajectory models, including group proportions and posterior probabilities. Created by *Andrew Wheeler*.
