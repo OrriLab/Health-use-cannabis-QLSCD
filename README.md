@@ -19,7 +19,6 @@ In the **Do-files** you will find:
 11. MI impute.do – Performs multiple imputation for missing data across analytic variables.
 
 In the **Stata-Programs** folder you will find:
-
 P. auto\_traj\_initial.do
 Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC).
 Example usage:
