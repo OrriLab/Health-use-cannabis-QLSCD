@@ -20,7 +20,7 @@ In the **Do-files** you will find:
 
 In the **Stata-Programs** folder you will find:
 
-P. auto_traj_initial.do
+**P. auto_traj_initial.do**:
 Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC).
 
 Example usage:
