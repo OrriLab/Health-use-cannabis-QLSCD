@@ -22,7 +22,7 @@ Got it — here’s your text with **only spaces and line breaks adjusted** so G
 
 In the **Stata-Programs** folder you will find:
 
-**P. auto\_traj\_initial.do**
+**P. auto\_traj\_initial.do**:
 Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC).
 
 Example usage:
@@ -33,9 +33,7 @@ auto_traj_initial, trajopts("var(m_12m_thc_child n_12m_thc_child p_12m_thc_child
 
 Created by Pablo Martínez
 
----
-
-**P. auto\_traj\_final.do**
+**P. auto\_traj\_final.do**:
 Performs polynomial selection for trajectory models, also based on BIC.
 
 Example usage:
@@ -46,9 +44,7 @@ auto_traj_final, trajopts("var(m_12m_thc_child n_12m_thc_child p_12m_thc_child r
 
 Created by Pablo Martínez
 
----
-
-**P. covbalance.do**
+**P. covbalance.do**:
 Evaluates covariate balance across groups (supports binary or multi-valued treatments, overlap weights and ASD checks).
 
 Example usage:
@@ -59,9 +55,7 @@ covbalance2, treatment(_traj_Group) covariates($impnameglobdich) weights(overlap
 
 Created by Pablo Martínez
 
----
-
-**P. micheckimputed.do**
+**P. micheckimputed.do**:
 Diagnostic program for inspecting multiply imputed datasets by comparing distributions of imputed vs observed values.
 
 Example usage:
@@ -73,9 +67,7 @@ micheckimputed, cat(ethnicitymom ethnicitydad tobaccopregnant lifetobaccochild l
 
 Created by Pablo Martínez
 
----
-
-**P. miconverge.do**
+**P. miconverge.do**:
 Monitors and saves convergence diagnostics for multiple imputation routines.
 
 Example usage:
@@ -86,16 +78,12 @@ miconverge, missvar(o_a_famfunc p_internalizing p_externalizing p_socialskills p
 
 Originally described in the Stata Manual
 
----
-
-**P. mivif.do**
+**P. mivif.do**:
 Calculates multicollinearity diagnostics (variance inflation factors, VIF) in multiply imputed datasets.
 
 Created by **Daniel Klein**
 
----
-
-**P. Summary\_table\_procTraj.do**
+**P. Summary\_table\_procTraj.do**:
 Produces summary tables of trajectory models, including group proportions and posterior probabilities.
 
 Created by **Andrew Wheeler**
