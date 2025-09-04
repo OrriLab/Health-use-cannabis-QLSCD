@@ -21,6 +21,7 @@ In the **Do-files** you will find:
 In the **Stata-Programs** folder you will find:
 * **P. auto\_traj\_initial.do**
 Performs group selection for group-based trajectory modeling based on the Bayesian Information Criterion (BIC).
+
 Example usage:
     auto_traj_initial, trajopts("var(m_12m_thc_child n_12m_thc_child p_12m_thc_child r_12m_thc_child) indep(mage-rage) model(zip) drop(0) obsmar(can_mar) weight(sampling)") groups(5) initpoly(2)
 → Fits models with 1–5 groups, each with quadratic polynomials, and compares them on BIC.
